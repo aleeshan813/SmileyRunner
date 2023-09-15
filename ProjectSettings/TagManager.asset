@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Terrain
   - Wall
+  - Cherry
+  - Life
+  - Trap
+  - Flag
+  - demo
   layers:
   - Default
   - TransparentFX
@@ -40,18 +45,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 3575720647
     locked: 0
   - name: Terrain
     uniqueID: 3693060377
     locked: 0
+  - name: Terrain_Piller
+    uniqueID: 2373944869
+    locked: 0
   - name: Player
     uniqueID: 2576223745
     locked: 0
+  - name: Cherry
+    uniqueID: 3908110773
+    locked: 0
   - name: Wall
     uniqueID: 197628201
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
