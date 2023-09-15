@@ -6,8 +6,8 @@ public class Life : MonoBehaviour
     [SerializeField] Image[] HealthImg;
     [SerializeField] GameObject ExitPanel;
 
-   [SerializeField] Rigidbody2D rb;
-    [SerializeField] Animator Player_anim;
+       Rigidbody2D rb;
+       Animator Player_anim;
 
     // Keeps track of the current health.
     private int currentHealth;
