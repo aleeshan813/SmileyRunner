@@ -21,6 +21,7 @@ public class LevelSelector : MonoBehaviour
     // Update is called once per frame
     public void OnScene(int level)
     {
+        AudioManager.instance.PlaySFX("GameWin");
         string levelName = "level_" + level;
         SceneManager.LoadScene("Level_" + level.ToString());
     }

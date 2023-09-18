@@ -6,13 +6,14 @@ public class Cherry : MonoBehaviour
 {
     [SerializeField] GameObject Player;
     [SerializeField] Points scoring;
-    int point = 0;
+    public int point = 0;
 
     private void OnTriggerEnter2D(Collider2D collition)
     {
 
         if (collition.gameObject.CompareTag("Cherry"))
         {
+            AudioManager.instance.PlaySFX("Coin");
             point++;
             ScoreUpdating();
             Destroy(collition.gameObject);

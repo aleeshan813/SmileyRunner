@@ -16,6 +16,15 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void Newgame()
+    {
+        // Reset the unlocked level to 1
+        PlayerPrefs.SetInt("UnlockedLevel", 1);
+        PlayerPrefs.Save();
+        AudioManager.instance.PlaySFX("GameWin");
+        // Load the first level
+        SceneManager.LoadScene("Level_1");
+    }
 
     public void Volume()
     {

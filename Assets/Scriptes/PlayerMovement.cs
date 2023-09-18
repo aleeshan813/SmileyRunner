@@ -25,20 +25,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        updateAnimationState();
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2 (dirX * movSpeed, rb.velocity.y);
         
         if (Input.GetButton("Jump") && Isgrounded)
         {
+            AudioManager.instance.PlaySFX("Jumping");
             Isgrounded = false;
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
-        updateAnimationState();
+  
     }
 
-    private void OnCollisionEnter2D(Collision2D collisionInfo)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collisionInfo.gameObject.CompareTag("Terrain"))
+        if (collision.gameObject.CompareTag("Terrain"))
         {
             Isgrounded = true;
         }

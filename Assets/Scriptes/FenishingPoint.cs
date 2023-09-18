@@ -15,6 +15,7 @@ public class FenishingPoint : MonoBehaviour
     }
     void NextLevel(int level)
     {
+        AudioManager.instance.PlaySFX("GameWin");
         string levelName = "level_" + level;
         SceneManager.LoadScene("Level_" + level.ToString());
         UnlockNewLevel(Level);

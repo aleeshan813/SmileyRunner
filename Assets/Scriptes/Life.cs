@@ -6,8 +6,9 @@ public class Life : MonoBehaviour
     [SerializeField] Image[] HealthImg;
     [SerializeField] GameObject ExitPanel;
 
-       Rigidbody2D rb;
-       Animator Player_anim;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator Player_anim;
+    
 
     // Keeps track of the current health.
     private int currentHealth;
@@ -30,6 +31,7 @@ public class Life : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Trap"))
         {
+            AudioManager.instance.PlaySFX("Lost");
             // Reduce health when colliding with an enemy.
             TakeDamage();
         }
@@ -91,6 +93,7 @@ public class Life : MonoBehaviour
     }
     void ExitPanelactive()
     {
+        AudioManager.instance.PlaySFX("GameOver");
         ExitPanel.SetActive(true);
     }
 }

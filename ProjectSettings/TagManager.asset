@@ -11,11 +11,12 @@ TagManager:
   - Trap
   - Flag
   - demo
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
