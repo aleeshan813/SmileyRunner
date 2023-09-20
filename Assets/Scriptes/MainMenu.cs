@@ -47,11 +47,4 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene(2);
         }
     }
-
-    /* public void Points()
-     {
-         // Get the score from the ScoreManager and display it
-         int score = ScoreManager.Instance.GetScore();
-         pointstext.text = "Total Points: " + score;
-     }*/
 }

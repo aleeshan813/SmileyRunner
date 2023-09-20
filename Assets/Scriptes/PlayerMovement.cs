@@ -9,11 +9,16 @@ public class PlayerMovement : MonoBehaviour
     Animator anim;
 
     float dirX = 0;
+    [SerializeField] GameObject PlayerCamera;
+    [SerializeField] GameObject MapCamera;
     [SerializeField] float movSpeed = 7f;
     [SerializeField] float jumpSpeed = 14f;
 
     enum MovememtState { idle, running, jumping, falling}
+
     bool Isgrounded;
+    bool SwitchCamera = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +33,24 @@ public class PlayerMovement : MonoBehaviour
         updateAnimationState();
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2 (dirX * movSpeed, rb.velocity.y);
-        
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (SwitchCamera)
+            {
+                SwitchCamera = false;
+                PlayerCamera.SetActive(false);
+                MapCamera.SetActive(true);
+            } 
+             
+           else
+            { 
+                SwitchCamera = true; PlayerCamera.SetActive(true);
+                MapCamera.SetActive(false);
+            }
+            
+        }
+
         if (Input.GetButton("Jump") && Isgrounded)
         {
             AudioManager.instance.PlaySFX("Jumping");

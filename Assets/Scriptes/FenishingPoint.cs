@@ -29,7 +29,6 @@ public class FenishingPoint : MonoBehaviour
         {
             PlayerPrefs.SetInt("ReachedIndex", nextLevelIndex);
             PlayerPrefs.SetInt("UnlockedLevel", nextLevelIndex);
-            PlayerPrefs.DeleteKey("ReachedIndex");
             PlayerPrefs.Save();
         }
     }

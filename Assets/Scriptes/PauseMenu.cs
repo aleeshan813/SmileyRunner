@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject PausPanel;
+    [SerializeField] GameObject VolumePanel;
 
     // Update is called once per frame
     void Update()
@@ -23,7 +24,8 @@ public class PauseMenu : MonoBehaviour
 
     public void volume()
     {
-
+       VolumePanel.SetActive(true);
+        PausPanel.SetActive(false);
     }
 
     public void Pause()
@@ -38,6 +40,4 @@ public class PauseMenu : MonoBehaviour
        PausPanel.SetActive(false);
        Time.timeScale = 1.0f;
     }
-
-
 }

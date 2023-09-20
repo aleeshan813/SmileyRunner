@@ -30,4 +30,5 @@ public class Wepon : MonoBehaviour
 
         Instantiate(bulletPrefab, FirePoint.position, FirePoint.rotation);
     }
+
 }
