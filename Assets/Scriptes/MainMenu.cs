@@ -26,11 +26,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Level_1");
     }
 
-    public void Volume()
-    {
-
-    }
-
     public void play()
     {
         // Retrieve the unlocked level from PlayerPrefs
