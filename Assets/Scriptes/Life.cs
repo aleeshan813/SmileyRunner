@@ -1,9 +1,11 @@
+using System.Data.SqlTypes;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Life : MonoBehaviour
 {
     [SerializeField] Image[] HealthImg;
+    [SerializeField] Image special;
     [SerializeField] GameObject ExitPanel;
 
     [SerializeField] Rigidbody2D rb;

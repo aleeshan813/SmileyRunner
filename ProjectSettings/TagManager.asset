@@ -12,6 +12,7 @@ TagManager:
   - Flag
   - demo
   - Enemy
+  - special
   layers:
   - Default
   - TransparentFX
