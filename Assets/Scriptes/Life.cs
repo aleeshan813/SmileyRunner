@@ -1,4 +1,3 @@
-using System.Data.SqlTypes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,11 +21,6 @@ public class Life : MonoBehaviour
         currentHealth = HealthImg.Length;
         // Enable all health images at the start.
         EnableAllHealthImages();
-    }
-
-    private void Update()
-    {
-        // You can add any necessary update logic here.
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
